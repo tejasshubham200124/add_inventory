@@ -1,7 +1,40 @@
-import React from 'react'
+import React, { useState } from 'react'
 import * as FaIcons from 'react-icons/fa';
 
 function Login() {
+
+
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [message, setMessage] = useState("");
+
+    let handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            let res = await fetch("https://sarmicrosystems.in/react_inventory/login.php?email=" + email + "&password=" + password, {
+                method: "POST",
+                body: JSON.stringify({
+                    'email': email,
+                    'password': password,
+                }),
+            });
+            let resJson = await res.json();
+            console.log(resJson);
+            if (resJson === 1) {
+                setEmail("");
+                setPassword("");
+                setMessage("User created successfully");
+            } else {
+                setMessage("Some error occured");
+            }
+        }
+        catch (err) {
+            console.log(err);
+        }
+    };
+
+
+
     return (
         <div className="auth-wrapper">
             <div className="auth-content">
@@ -18,12 +51,12 @@ function Login() {
                         </div>
                         <h3 className="mb-4">Login</h3>
                         <div className="input-group mb-3">
-                            <input type="email" className="form-control" placeholder="Email" />
+                            <input type="email" className="form-control" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}/>
                         </div>
                         <div className="input-group mb-4">
-                            <input type="password" className="form-control" placeholder="password" />
+                            <input type="password" className="form-control" placeholder="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
                         </div>
-                        <button className="btn btn-primary shadow-2 mb-4">Login</button>
+                        <button className="btn btn-primary shadow-2 mb-4" onClick={handleSubmit}>Login</button>
                     </div>
                 </div>
             </div>
