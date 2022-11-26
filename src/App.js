@@ -12,6 +12,8 @@ import Products from './pages/Products';
 import Login from './pages/Login';
 import Create_vendor from './pages/create_vendor';
 import Sign_up from './pages/Sign_up';
+import Users from './pages/Users';
+import Add_material from './pages/Add_material';
 function App() {
   return (
     <>
@@ -24,6 +26,8 @@ function App() {
           <Route path='/login' component={Login} />
           <Route path='/Create_vendor' component={Create_vendor} />
           <Route path='/Sign_up' component={Sign_up} />
+          <Route path='/Users' component={Users} />
+          <Route path='/Add_material' component={Add_material} />
           
         </Switch>
       </Router>
