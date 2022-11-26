@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { SidebarData } from './SidebarData';
 import './Navbar.css';
 import { IconContext } from 'react-icons';
+import Dropdown from 'rsuite/Dropdown';
 
 function Navbar() {
   const [sidebar, setSidebar] = useState(false);
@@ -19,14 +20,15 @@ function Navbar() {
             <FaIcons.FaBars onClick={showSidebar} />
           </Link>
         </div>
-        <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
+        <nav className={sidebar ? 'nav-menu active' : 'nav-menu '}>
           <ul className='nav-menu-items' onClick={showSidebar}>
             <li className='navbar-toggle'>
               <Link to='#' className='menu-bars'>
-                <AiIcons.AiOutlineClose />
+                <FaIcons.FaBars onClick={showSidebar} />
               </Link>
             </li>
             {SidebarData.map((item, index) => {
+
               return (
                 <li key={index} className={item.cName}>
                   <Link to={item.path}>
@@ -38,6 +40,7 @@ function Navbar() {
             })}
           </ul>
         </nav>
+
       </IconContext.Provider>
     </>
   );
