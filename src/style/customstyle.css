@@ -2,6 +2,7 @@
     padding: 10px ;
     box-shadow: 0px 0px 10px 2px rgb(0 0 0 / 40%) !important;
     margin: 20px auto;
+    background: #caffdb;
 }
 input,select,textarea{
     margin: 5px auto;
