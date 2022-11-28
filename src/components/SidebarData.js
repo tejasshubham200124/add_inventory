@@ -72,6 +72,13 @@ export const SidebarData = [
     child :0,
   },
   {
+    title: 'Show Material',
+    path: '/Show_material',
+    icon: <AiIcons.AiFillUnlock />,
+    cName: 'nav-text',
+    child :0,
+  },
+  {
     title: 'Demo',
     path: '/demo',
     icon: <AiIcons.AiFillUnlock />,

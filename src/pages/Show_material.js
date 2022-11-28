@@ -1,4 +1,4 @@
-import React from 'react';
+import React , {useEffect,useState} from 'react';
 
 
 
@@ -49,19 +49,18 @@ function Show_material(props) {
                             <thead>
                               <tr>
                                 <th>#</th>
-                                <th>Vendor</th>
-                                <th>Contact</th>
-                                <th>Address</th>
+                                <th>Vendor Name</th>
+                                <th>Material</th>
+                                <th>Created By</th>
                               </tr>
                             </thead>
                             <tbody>
                               {items.map((item, index) => (
                                 <tr>
                                   <th scope="row">{index + 1}</th>
-                                  <td>{item.name}</td>
-                                  <td>{item.contact}</td>
-                                  <td>{item.email}</td>
-                                  <td>{item.address}</td>
+                                  <td>{item.vendor_name}</td>
+                                  <td>{item.material}</td>
+                                  <td>{item.created_by_name}</td>
                                 </tr>
                               ))}
 
