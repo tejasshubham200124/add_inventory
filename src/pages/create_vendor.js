@@ -1,4 +1,5 @@
 import React ,{ useState} from 'react';
+import user from '../App';
 
 function Create_vendor() {
 
@@ -11,7 +12,8 @@ function Create_vendor() {
 
     return (
         <div className="pcoded-main-container">
-            <h2 className='center'> Create Vendors </h2>
+            <h2 className='center'> Create Vendors
+             </h2>
             <div className="pcoded-wrapper">
                 <div className="pcoded-content">
                     <div className="pcoded-inner-content">

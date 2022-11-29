@@ -4,9 +4,17 @@
     margin: 20px auto;
     background: #caffdb;
 }
+.recharts-wrapper{
+    margin: auto;
+}
 input,select,textarea{
     margin: 5px auto;
 }
+
+.nav-menu.active+div.pcoded-main-container{
+    margin-left: 264px;
+}
+
 .add_success{
     border: 1px solid;
     border-radius: 50px;

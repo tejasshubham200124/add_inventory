@@ -17,9 +17,15 @@ import Users from './pages/Users';
 import Add_material from './pages/Add_material';
 import Show_material from './pages/Show_material';
 
-
 import Example from './pages/Example';
+
+
+
+
+
+
 function App() {
+  // const user = JSON.parse(localStorage.user);
   return (
     <>
       <Router>
@@ -36,7 +42,7 @@ function App() {
           <Route path='/add_material' component={Add_material} />
           <Route path='/show_material' component={Show_material} />
           <Route path='/demo' component={Example} />
-          
+
         </Switch>
       </Router>
     </>

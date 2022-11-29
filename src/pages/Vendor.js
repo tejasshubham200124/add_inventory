@@ -34,7 +34,7 @@ function Venor() {
   } else {
     return (
       <div className="pcoded-main-container">
-        <h2 className='center'> Vendors </h2>
+        {/* <h2 className='center'> Vendors </h2> */}
         <div className="pcoded-wrapper">
           <div className="pcoded-content">
             <div className="pcoded-inner-content">

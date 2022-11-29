@@ -11,14 +11,18 @@ function Navbar() {
   const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar);
+  const user = JSON.parse(localStorage.user);
+
 
   return (
     <>
       <IconContext.Provider value={{ color: '#fff' }}>
-        <div className='navbar'>
+        <div className='navbar' style={{display: 'flex',justifyContent: 'space-between'}}>
           <Link to='#' className='menu-bars'>
             <FaIcons.FaBars onClick={showSidebar} />
           </Link>
+          {/* Comfort */}
+          <p style={{color:'#fff',marginRight: '2rem'}}>Hi, {user.full_name} </p>
         </div>
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu '}>
           <ul className='nav-menu-items' onClick={showSidebar}>
