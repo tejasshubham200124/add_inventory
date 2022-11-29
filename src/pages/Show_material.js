@@ -57,7 +57,7 @@ function Show_material(props) {
                             <tbody>
                               {items.map((item, index) => (
                                 <tr>
-                                  <th scope="row">{index + 1}</th>
+                                  <td key="{index+1}" scope="row">{index + 1}</td>
                                   <td>{item.vendor_name}</td>
                                   <td>{item.material}</td>
                                   <td>{item.created_by_name}</td>

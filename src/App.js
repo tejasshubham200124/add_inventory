@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
+import Vendor from './pages/Vendor';
 import Reports from './pages/Reports';
 import Products from './pages/Products';
 import Login from './pages/Login';
@@ -25,14 +26,15 @@ function App() {
         <Navbar />
         <Switch>
           <Route path='/' exact component={Home} />
+          <Route path='/vendor' component={Vendor} />
           <Route path='/reports' component={Reports} />
           <Route path='/products' component={Products} />
           <Route path='/login' component={Login} />
-          <Route path='/Create_vendor' component={Create_vendor} />
-          <Route path='/Sign_up' component={Sign_up} />
-          <Route path='/Users' component={Users} />
-          <Route path='/Add_material' component={Add_material} />
-          <Route path='/Show_material' component={Show_material} />
+          <Route path='/create_vendor' component={Create_vendor} />
+          <Route path='/sign_up' component={Sign_up} />
+          <Route path='/users' component={Users} />
+          <Route path='/add_material' component={Add_material} />
+          <Route path='/show_material' component={Show_material} />
           <Route path='/demo' component={Example} />
           
         </Switch>

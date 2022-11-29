@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
-function Users() {
+
+
+function Venor() {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
@@ -8,7 +10,7 @@ function Users() {
   // this useEffect will run once
   // similar to componentDidMount()
   useEffect(() => {
-    fetch("https://sarmicrosystems.in/react_inventory/get_users.php")
+    fetch("https://sarmicrosystems.in/react_inventory/get_vendor.php")
       .then(res => res.json())
       .then(
         (result) => {
@@ -32,7 +34,7 @@ function Users() {
   } else {
     return (
       <div className="pcoded-main-container">
-        <h2 className='center'> Users </h2>
+        <h2 className='center'> Vendors </h2>
         <div className="pcoded-wrapper">
           <div className="pcoded-content">
             <div className="pcoded-inner-content">
@@ -42,23 +44,24 @@ function Users() {
                     <div className="col-sm-12">
                       <div className='card'>
                         <div className='card-block'>
+
                           <table className="table table-hover">
                             <thead>
                               <tr>
                                 <th>#</th>
-                                <th>Name</th>
+                                <th>Vendor</th>
                                 <th>Contact</th>
-                                <th>Email</th>
+                                <th>Address</th>
                               </tr>
                             </thead>
                             <tbody>
                               {items.map((item, index) => (
-                                <tr key={index+1}>
-                                  <td scope="row">{index + 1}</td>
+                                <tr>
+                                  <th scope="row">{index + 1}</th>
                                   <td>{item.name}</td>
                                   <td>{item.contact}</td>
                                   <td>{item.email}</td>
-
+                                  <td>{item.address}</td>
                                 </tr>
                               ))}
 
@@ -79,7 +82,7 @@ function Users() {
   }
 }
 
-export default Users;
+export default Venor;
 
 
 

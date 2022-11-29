@@ -1,7 +1,11 @@
 import React, { useState } from 'react'
 import * as FaIcons from 'react-icons/fa';
+import { Redirect, Route, Switch } from "react-router";
+import { useHistory } from "react-router-dom";
 
+import AuthService from '../components/AuthService';
 function Login() {
+  const history = useHistory();
 
 
     const [email, setEmail] = useState("");
@@ -19,11 +23,9 @@ function Login() {
                 }),
             });
             let resJson = await res.json();
-            console.log(resJson);
-            if (resJson === 1) {
-                setEmail("");
-                setPassword("");
-                setMessage("User created successfully");
+            if (resJson.is_authenticate == 1) {
+                localStorage.setItem('user' ,JSON.stringify(resJson)) 
+                history.push("/");
             } else {
                 setMessage("Some error occured");
             }
@@ -33,11 +35,10 @@ function Login() {
         }
     };
 
-
-
     return (
         <div className="auth-wrapper">
             <div className="auth-content">
+
                 <div className="auth-bg">
                     <span className="r"></span>
                     <span className="r s"></span>

@@ -5,20 +5,26 @@ import * as IoIcons from 'react-icons/io';
 
 export const SidebarData = [
   {
-    title: 'Users',
-    path: '/Users',
-    icon: <AiIcons.AiFillHome />,
-    cName: 'nav-text',
-  },
-  {
-    title: 'Vendor',
+    title: 'Home',
     path: '/',
     icon: <AiIcons.AiFillHome />,
     cName: 'nav-text',
   },
   {
+    title: 'Users',
+    path: '/users',
+    icon: <AiIcons.AiFillHome />,
+    cName: 'nav-text',
+  },
+  {
+    title: 'Vendor',
+    path: '/vendor',
+    icon: <AiIcons.AiFillHome />,
+    cName: 'nav-text',
+  },
+  {
     title: 'Create Vendor',
-    path: '/Create_vendor',
+    path: '/create_vendor',
     icon: <IoIcons.IoIosPaper />,
     cName: 'nav-text'
   },
@@ -51,6 +57,20 @@ export const SidebarData = [
   //   child :0,
   // },
   {
+    title: 'Add Material',
+    path: '/add_material',
+    icon: <AiIcons.AiFillUnlock />,
+    cName: 'nav-text',
+    child :0,
+  },
+  {
+    title: 'Show Material',
+    path: '/show_material',
+    icon: <AiIcons.AiFillUnlock />,
+    cName: 'nav-text',
+    child :0,
+  },
+  {
     title: 'Login',
     path: '/login',
     icon: <AiIcons.AiFillUnlock />,
@@ -59,25 +79,12 @@ export const SidebarData = [
   },
   {
     title: 'Sign Up',
-    path: '/Sign_up',
+    path: '/sign_up',
     icon: <AiIcons.AiFillUnlock />,
     cName: 'nav-text',
     child :0,
   },
-  {
-    title: 'Add Material',
-    path: '/Add_material',
-    icon: <AiIcons.AiFillUnlock />,
-    cName: 'nav-text',
-    child :0,
-  },
-  {
-    title: 'Show Material',
-    path: '/Show_material',
-    icon: <AiIcons.AiFillUnlock />,
-    cName: 'nav-text',
-    child :0,
-  },
+
   {
     title: 'Demo',
     path: '/demo',

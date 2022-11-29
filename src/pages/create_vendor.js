@@ -7,35 +7,6 @@ function Create_vendor() {
     const [contact, setContact] = useState("");
     const [address, setAddress] = useState("");
     const [message, setMessage] = useState("");
-  
-    let handleSubmit = async (e) => {
-      e.preventDefault();
-      try {
-        let res = await fetch("https://sarmicrosystems.in/react_inventory/create_vendor.php?name="+name+"&email="+email+"&contact="+contact+"&address="+address, {
-          method: "POST",
-          body: JSON.stringify({
-            'name': name,
-            'email': email,
-            'contact': contact,
-            'address': address,
-          }),
-        });
-        let resJson = await res.json();
-        if (resJson === 1) {
-          setName("");
-          setEmail("");
-          setContact("");
-          setAddress("");
-          setMessage("Vendor created successfully");
-        } else {
-          setMessage("Some error occured");
-        }
-      }
-    catch (err) {
-            console.log(err);
-          }
-    };
-
 
 
     return (
@@ -48,7 +19,7 @@ function Create_vendor() {
                             <div className="page-wrapper">
                                 <div className="row">
                                     <div className="col-sm-12">
-                                        <form onSubmit={handleSubmit}>
+                                        <form>
 
                                             <div className="card">
                                                 <div className="card-header">
