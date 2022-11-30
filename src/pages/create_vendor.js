@@ -12,8 +12,6 @@ function Create_vendor() {
 
     return (
         <div className="pcoded-main-container">
-            <h2 className='center'> Create Vendors
-             </h2>
             <div className="pcoded-wrapper">
                 <div className="pcoded-content">
                     <div className="pcoded-inner-content">
@@ -25,7 +23,7 @@ function Create_vendor() {
 
                                             <div className="card">
                                                 <div className="card-header">
-                                                    <h5>Basic Inputs</h5>
+                                                    <h5> Create Vendor </h5>
                                                 </div>
                                                 <div className="card-body">
                                                     <div className="form-group">

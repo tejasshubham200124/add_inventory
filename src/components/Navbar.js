@@ -11,9 +11,8 @@ function Navbar() {
   const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar);
-  const user = JSON.parse(localStorage.user);
-
-
+// console.log(window.location.pathname);
+  // const user = JSON.parse(sessionStorage.user);
   return (
     <>
       <IconContext.Provider value={{ color: '#fff' }}>
@@ -22,7 +21,10 @@ function Navbar() {
             <FaIcons.FaBars onClick={showSidebar} />
           </Link>
           {/* Comfort */}
-          <p style={{color:'#fff',marginRight: '2rem'}}>Hi, {user.full_name} </p>
+          <p style={{color:'#fff',marginRight: '2rem'}}>Hi, 
+          { sessionStorage.user ? ' '+ sessionStorage.username : 'User'} 
+          
+          </p>
         </div>
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu '}>
           <ul className='nav-menu-items' onClick={showSidebar}>
@@ -48,5 +50,6 @@ function Navbar() {
     </>
   );
 }
+
 
 export default Navbar;

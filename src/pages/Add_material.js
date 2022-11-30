@@ -80,7 +80,7 @@ export default function Add_material() {
 
     return (
         <div className="pcoded-main-container">
-            <h2 className='center'> Add Material </h2>
+
             <div className="pcoded-wrapper">
                 <div className="pcoded-content">
                     <div className="pcoded-inner-content">
