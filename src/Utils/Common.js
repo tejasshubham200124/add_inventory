@@ -5,6 +5,12 @@ export const getUser = () => {
   else return null;
 }
 
+export const getUserName = () => {
+  const userNameStr = sessionStorage.getItem('username');
+  if (userNameStr) return userNameStr;
+  else return null;
+}
+
 // return the token from the session storage
 export const getToken = () => {
   return sessionStorage.getItem('token') || null;
@@ -14,6 +20,8 @@ export const getToken = () => {
 export const removeUserSession = () => {
   sessionStorage.removeItem('token');
   sessionStorage.removeItem('user');
+  sessionStorage.removeItem('username');
+
 }
 
 // set the token and user from the session storage

@@ -58,8 +58,7 @@ const data = [
 export default function Example() {
   return (
     <div className="pcoded-main-container">
-      <h2 className='center'> Create Vendors
-      </h2>
+      
       <div className="pcoded-wrapper">
         <div className="pcoded-content">
           <div className="pcoded-inner-content">

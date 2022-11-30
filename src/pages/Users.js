@@ -49,6 +49,7 @@ function Users() {
                                 <th>Name</th>
                                 <th>Contact</th>
                                 <th>Email</th>
+                                <th>Actions</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -58,8 +59,8 @@ function Users() {
                                   <td>{item.name}</td>
                                   <td>{item.contact}</td>
                                   <td>{item.email}</td>
-
-                                </tr>
+                                  <td><a className='btn btn-success'>Modify</a></td>
+                                  </tr>
                               ))}
 
                             </tbody>

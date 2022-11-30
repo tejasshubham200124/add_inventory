@@ -1,18 +1,25 @@
 import React, { useEffect, useState } from 'react';
+import { getUser, getUserName, removeUserSession } from '../Utils/Common';
 
 
-function Home() {
+function Home(props) {
+  const user = getUser();
+  const username = getUserName();
+  // handle click event of logout button
+  const handleLogout = () => {
+    removeUserSession();
+    props.history.push('/login');
+  }
+
   return (
     <div className="pcoded-main-container">
-      
       <div className="pcoded-wrapper">
         <div className="pcoded-content">
           <div className="pcoded-inner-content">
             <div className="main-body">
               <div className="page-wrapper">
+                <p>Welcome <b> {username} </b>! <input className="btn btn-danger" type="button" onClick={handleLogout} value="Logout" /></p>
                 <div className="row">
-
-
                   <div className="col-md-6 col-xl-4">
                     <div className="card">
                       <div className="card-block">

@@ -16,12 +16,17 @@ function Login(props) {
             { username: username.value, password: password.value }).
             then(response => {
                 setLoading(false);
-                setUserSession(
-                    response.data.token, 
-                    response.data.userid,
-                    response.data.full_name
-                    );
-                props.history.push('/');
+                if(response.data.userid>0){
+                    setUserSession(
+                        response.data.token, 
+                        response.data.userid,
+                        response.data.full_name
+                        );
+                    props.history.push('/dashboard');
+                }else if(response.data == 0){
+                        alert(' Invalid Credentials !');
+                }
+
             }).catch(error => {
                 setLoading(false);
                 if (error.response.status === 401) setError(error.response.data.message);

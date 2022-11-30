@@ -23,7 +23,7 @@ function Dashboard(props) {
                       <div className="card-header">
 
                         Welcome {user.name}!<br /><br />
-                        <input type="button" onClick={handleLogout} value="Logout" />
+                        <input class="btn btn-danger" type="button" onClick={handleLogout} value="Logout" />
 
                       </div>
                     </div>

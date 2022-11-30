@@ -6,8 +6,11 @@ import { SidebarData } from './SidebarData';
 import './Navbar.css';
 import { IconContext } from 'react-icons';
 import Dropdown from 'rsuite/Dropdown';
+import { getUser, removeUserSession } from '../Utils/Common';
 
-function Navbar() {
+
+function Navbar(props) {
+
   const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar);
@@ -21,10 +24,11 @@ function Navbar() {
             <FaIcons.FaBars onClick={showSidebar} />
           </Link>
           {/* Comfort */}
-          <p style={{color:'#fff',marginRight: '2rem'}}>Hi, 
-          { sessionStorage.user ? ' '+ sessionStorage.username : 'User'} 
+          <p style={{color:'#fff',marginRight: '2rem'}}> 
+          { sessionStorage.user  ? 'Hi, '+ sessionStorage.username : ''} 
           
           </p>
+
         </div>
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu '}>
           <ul className='nav-menu-items' onClick={showSidebar}>
