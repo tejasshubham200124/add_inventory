@@ -23,9 +23,13 @@ import Example from './pages/Example';
 import Login from './Login';
 import Dashboard from './Dashoard';
 
+import ModalExample from './pages/ModalExample';
+
 import PrivateRoute from './Utils/PrivateRoute';
 import PublicRoute from './Utils/PublicRoute';
 import { getToken, removeUserSession, setUserSession } from './Utils/Common';
+
+import Articles from "./articles";
 
 function App(props) {
   const [authLoading, setAuthLoading] = useState(true);
@@ -61,9 +65,11 @@ function App(props) {
       <Router>
         <Navbar />
         <Switch>
+        {/* <Articles /> */}
 
           <PublicRoute path="/login" component={Login} />
-
+          
+          <PrivateRoute path="/modal" component={ModalExample} />
           <PrivateRoute path="/" exact component={Home} />
           <PrivateRoute path='/dashboard' exact component={Home} />
           <PrivateRoute path='/vendor' component={Vendor} />

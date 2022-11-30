@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { setUserSession } from './Utils/Common';
+import { getUser, removeUserSession } from './Utils/Common';
+
+
+removeUserSession();
 
 function Login(props) {
     const [loading, setLoading] = useState(false);

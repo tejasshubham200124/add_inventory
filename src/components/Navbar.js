@@ -25,7 +25,16 @@ function Navbar(props) {
           </Link>
           {/* Comfort */}
           <p style={{color:'#fff',marginRight: '2rem'}}> 
-          { sessionStorage.user  ? 'Hi, '+ sessionStorage.username : ''} 
+          { sessionStorage.user ? 'Hi, '+ sessionStorage.username : ''} 
+          &nbsp;&nbsp;&nbsp;
+          <a href="/login"><i className="fa-solid fa-power-off" title="Logout" style={{
+                color: 'white',
+                background: 'black',
+                padding: '10px',
+                borderRadius: '22px'
+          }}>
+          </i></a>
+          
           
           </p>
 
