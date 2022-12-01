@@ -4,6 +4,7 @@ import axios from 'axios';
 import './App.css';
 import './style/style.css';
 import './style/customstyle.css';
+import './components/dattaable.css';
 
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Switch, Route, useLocation } from 'react-router-dom';

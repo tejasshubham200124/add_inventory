@@ -8,91 +8,103 @@ export const SidebarData = [
     title: 'Masteradmin',
     path: '/admin',
     icon: <AiIcons.AiFillHome />,
-    cName: 'nav-text',
-    submenu : {
-      title: 'vendor',
-      path: '/admin/vendor',
-    }
+    cName: 'nav-text pcoded-hasmenu',
+    child :1,
+    submenu : [
+      {
+        title: 'Vendor',
+        path: '/admin/vendor',
+      },
+      {
+        title: 'User',
+        path: '/admin/user',
+      }
+    ]
   },
-  {
-    title: 'Home',
-    path: '/',
-    icon: <AiIcons.AiFillHome />,
-    cName: 'nav-text',
-  },
-  {
-    title: 'Users',
-    path: '/users',
-    icon: <AiIcons.AiFillHome />,
-    cName: 'nav-text',
-  },
-  {
-    title: 'Vendor',
-    path: '/vendor',
-    icon: <AiIcons.AiFillHome />,
-    cName: 'nav-text',
-  },
+  // {
+  //   title: 'Home',
+  //   path: '/',
+  //   icon: <AiIcons.AiFillHome />,
+  //   cName: 'nav-text',
+  //   submenu : []
+  // },
+  // {
+  //   title: 'Users',
+  //   path: '/users',
+  //   icon: <AiIcons.AiFillHome />,
+  //   cName: 'nav-text',
+  //   submenu : []
+  // },
+  // {
+  //   title: 'Vendor',
+  //   path: '/vendor',
+  //   icon: <AiIcons.AiFillHome />,
+  //   cName: 'nav-text',
+  //   submenu : []
+  // },
   {
     title: 'Create Vendor',
     path: '/create_vendor',
     icon: <IoIcons.IoIosPaper />,
-    cName: 'nav-text'
+    cName: 'nav-text',
+    submenu : []
   },
   // {
   //   title: 'Products',
   //   path: '/products',
   //   icon: <FaIcons.FaCartPlus />,
   //   cName: 'nav-text',
-  //   child :0,
+  //   
   // },
   // {
   //   title: 'Team',
   //   path: '/team',
   //   icon: <IoIcons.IoMdPeople />,
   //   cName: 'nav-text',
-  //   child :0,
+  //   
   // },
   // {
   //   title: 'Messages',
   //   path: '/messages',
   //   icon: <FaIcons.FaEnvelopeOpenText />,
   //   cName: 'nav-text',
-  //   child :0,
+  //   
   // },
   // {
   //   title: 'Support',
   //   path: '/support',
   //   icon: <IoIcons.IoMdHelpCircle />,
   //   cName: 'nav-text',
-  //   child :0,
+  //   
   // },
   {
     title: 'Add Material',
     path: '/add_material',
     icon: <AiIcons.AiFillUnlock />,
     cName: 'nav-text',
-    child :0,
+    
+    submenu : []
   },
   {
     title: 'Show Material',
     path: '/show_material',
     icon: <AiIcons.AiFillUnlock />,
     cName: 'nav-text',
-    child :0,
+    submenu : []
   },
   {
     title: 'Login',
     path: '/login',
     icon: <AiIcons.AiFillUnlock />,
     cName: 'nav-text',
-    child :0,
+    submenu : []
   },
   {
     title: 'Sign Up',
     path: '/sign_up',
     icon: <AiIcons.AiFillUnlock />,
     cName: 'nav-text',
-    child :0,
+    submenu : []
   },
 
   {
@@ -100,13 +112,13 @@ export const SidebarData = [
     path: '/modal',
     icon: <AiIcons.AiFillUnlock />,
     cName: 'nav-text',
-    child :0,
+    submenu : []
   },
   {
     title: 'Demo',
     path: '/demo',
     icon: <AiIcons.AiFillUnlock />,
     cName: 'nav-text',
-    child :0,
+    submenu : []
   },
 ];
