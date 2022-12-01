@@ -5,8 +5,6 @@ import { Modal } from "react-bootstrap";
 function ModalComponent({ item }) {
 
   const [showModal, setShowModal] = useState(false);
-
-  console.log(item)
   return (
     <div key={item.userid}>
       <i style={{ margin: 'auto', color: '#2c8e95', cursor: 'pointer',fontSize: '20px' }} className="fas fa-edit" onClick={() => {

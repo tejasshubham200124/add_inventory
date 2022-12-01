@@ -6,6 +6,7 @@ import Modal from '@mui/material/Modal';
 
 import ModalComponent from "../modal";
 
+import swal from 'sweetalert';
 
 
 
@@ -44,15 +45,44 @@ function Users() {
 
   // }
 
+  // const deleteuser = () => {
+  //   swal({
+  //     title: "Are you sure?",
+  //     text: "Once deleted, you will not be able to recover this imaginary file!",
+  //     icon: "warning",
+  //     buttons: true,
+  //     dangerMode: true,
+  //   })
+  //     .then((willDelete) => {
+  //       if (willDelete) {
+  //         swal("Poof! Your imaginary file has been deleted!", {
+  //           icon: "success",
+  //         });
+  //       } else {
+  //         swal("Your imaginary file is safe!");
+  //       }
+  //     });
+  // }
 
+  function dele(item) {
+    swal({
+      title: "Are you sure?",
+      text: "Once deleted, you will not be able to recover this imaginary file!",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    })
+      .then((willDelete) => {
+        if (willDelete) {
+          swal("Poof! Your imaginary file has been deleted!", {
+            icon: "success",
+          });
+        } else {
+          swal("Your imaginary file is safe!");
+        }
+      });
+  }
 
-
-
-
-
-  // Note: the empty deps array [] means
-  // this useEffect will run once
-  // similar to componentDidMount()
   useEffect(() => {
     fetch("https://sarmicrosystems.in/react_inventory/get_users.php")
       .then(res => res.json())
@@ -61,9 +91,6 @@ function Users() {
           setIsLoaded(true);
           setItems(result);
         },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
         (error) => {
           setIsLoaded(true);
           setError(error);
@@ -80,43 +107,52 @@ function Users() {
   } else {
     return (
       <>
-      <div className="pcoded-main-container">
-        {/* <h2 className='center'> Users </h2> */}
-        <div className="pcoded-wrapper">
-          <div className="pcoded-content">
-            <div className="pcoded-inner-content">
-              <div className="main-body">
-                <div className="page-wrapper">
-                  <div className="row">
-                    <div className="col-sm-12">
-                      <div className='card'>
-                        <div className='card-block'>
-                          <table className="table table-hover">
-                            <thead>
-                              <tr>
-                                <th>#</th>
-                                <th>Name</th>
-                                <th>Contact</th>
-                                <th>Email</th>
-                                <th>Actions</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              {items.map((item, index) => (
-                                <tr key={index + 1}>
-                                  <td scope="row">{index + 1}</td>
-                                  <td>{item.name}</td>
-                                  <td>{item.contact}</td>
-                                  <td>{item.email}</td>
-                                  <td style={{display:'flex'}}>
-                                  <ModalComponent item={item} /> &nbsp;&nbsp; | &nbsp;&nbsp; <div><i style={{margin:'auto',color:'red',fontSize: '20px'}} className="fa-solid fa-trash"></i></div>
-                                  </td>
+        <div className="pcoded-main-container">
+          {/* <h2 className='center'> Users </h2> */}
+          <div className="pcoded-wrapper">
+            <div className="pcoded-content">
+              <div className="pcoded-inner-content">
+                <div className="main-body">
+                  <div className="page-wrapper">
+                    <div className="row">
+                      <div className="col-sm-12">
+                        <div className='card'>
+                          <div className='card-block'>
+                            <table className="table table-hover">
+                              <thead>
+                                <tr>
+                                  <th>#</th>
+                                  <th>Name</th>
+                                  <th>Contact</th>
+                                  <th>Email</th>
+                                  <th>Actions</th>
                                 </tr>
-                              ))}
+                              </thead>
+                              <tbody>
+                                {items.map((item, index) => (
+                                  <tr key={index + 1}>
+                                    <td scope="row">{index + 1}</td>
+                                    <td>{item.name}</td>
+                                    <td>{item.contact}</td>
+                                    <td>{item.email}</td>
+                                    <td style={{ display: 'flex' }}>
+                                      <ModalComponent item={item} /> &nbsp;&nbsp;
+                                      | &nbsp;&nbsp;
+                                      <div>
+                                        <i
+                                          style={{ margin: 'auto', color: 'red', fontSize: '20px', cursor: 'pointer' }}
+                                          onClick={dele}
+                                          className="fa-solid fa-trash">
+                                        </i>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                ))}
 
-                            </tbody>
-                          </table>
+                              </tbody>
+                            </table>
 
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -125,10 +161,9 @@ function Users() {
               </div>
             </div>
           </div>
+
         </div>
-        
-      </div>
-   
+
       </>
     );
   }

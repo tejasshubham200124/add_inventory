@@ -4,7 +4,7 @@ import { setUserSession } from './Utils/Common';
 import { getUser, removeUserSession } from './Utils/Common';
 
 
-removeUserSession();
+// removeUserSession();
 
 function Login(props) {
     const [loading, setLoading] = useState(false);
@@ -53,7 +53,8 @@ function Login(props) {
                 <div className="card">
                     <div className="card-body text-center">
                         <div className="mb-4">
-                            <i className="feather icon-unlock auth-icon"></i>
+                        <i className="fa-solid fa-unlock unclock_login"></i>
+                            {/* <i className="feather icon-unlock auth-icon"></i> */}
                         </div>
                         <h3 className="mb-4">Login</h3>
                         <div className="input-group mb-3">

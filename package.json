@@ -2,7 +2,6 @@
   "name": "react-sidebar-v1",
   "version": "0.1.0",
   "private": true,
-  "homepage": "",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
@@ -20,7 +19,8 @@
     "react-scripts": "3.4.3",
     "recharts": "^2.1.16",
     "rsuite": "^5.23.0",
-    "styled-components": "^5.3.6"
+    "styled-components": "^5.3.6",
+    "sweetalert": "^2.1.2"
   },
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",

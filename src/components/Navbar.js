@@ -7,15 +7,18 @@ import './Navbar.css';
 import { IconContext } from 'react-icons';
 import Dropdown from 'rsuite/Dropdown';
 import { getUser, removeUserSession } from '../Utils/Common';
-
+import swal from 'sweetalert';
 
 function Navbar(props) {
-
   const [sidebar, setSidebar] = useState(false);
-
   const showSidebar = () => setSidebar(!sidebar);
-// console.log(window.location.pathname);
-  // const user = JSON.parse(sessionStorage.user);
+  const handleLogout = () => {
+    removeUserSession();
+    swal("Logout Succesfull", "", "success");
+
+    props.history.push('/login');
+  }
+
   return (
     <>
       <IconContext.Provider value={{ color: '#fff' }}>
@@ -27,7 +30,8 @@ function Navbar(props) {
           <p style={{color:'#fff',marginRight: '2rem'}}> 
           { sessionStorage.user ? 'Hi, '+ sessionStorage.username : ''} 
           &nbsp;&nbsp;&nbsp;
-          <a href="/login"><i className="fa-solid fa-power-off" title="Logout" style={{
+          
+          <a href="" onClick={handleLogout} ><i className="fa-solid fa-power-off" title="Logout" style={{
                 color: 'white',
                 background: 'black',
                 padding: '10px',
@@ -63,6 +67,4 @@ function Navbar(props) {
     </>
   );
 }
-
-
 export default Navbar;
