@@ -72,15 +72,18 @@ function App(props) {
           <PublicRoute path="/login" component={Login} />
           <PublicRoute path='/sign_up' component={Sign_up} />
           
+          <PrivateRoute path="/admin/vendor" component={Vendor} />
+          <PrivateRoute path="/admin/user" component={Users} />
+
+
           <PrivateRoute path="/modal" component={ModalExample} />
           <PrivateRoute path="/" exact component={Home} />
           <PrivateRoute path='/dashboard' exact component={Home} />
-          <PrivateRoute path='/vendor' component={Vendor} />
+          {/* <PrivateRoute path='/vendor' component={Vendor} /> */}
           <PrivateRoute path='/reports' component={Reports} />
           <PrivateRoute path='/products' component={Products} />
           <PrivateRoute path='/login' component={Login} />
           <PrivateRoute path='/create_vendor' component={Create_vendor} />
-          <PrivateRoute path='/users' component={Users} />
           <PrivateRoute path='/add_material' component={Add_material} />
           <PrivateRoute path='/show_material' component={Show_material} />
           <PrivateRoute path='/demo' component={Example} />

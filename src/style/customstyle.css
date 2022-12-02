@@ -1,3 +1,15 @@
+@media only screen and (max-width:991px) {
+    .pcoded-header {
+        background: #3f4d67;
+        color: #fff;
+        margin-left: 0 !important;
+    }
+}
+
+.dropdown-menu-end {
+    right: 0;
+    left: auto;
+}
 nav{
     display: block;
     z-index: 1029;

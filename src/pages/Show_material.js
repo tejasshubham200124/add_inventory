@@ -1,40 +1,39 @@
-import React , {useEffect,useState} from 'react';
+import React, { useEffect, useState } from 'react';
 
 
 
 function Show_material(props) {
 
-    const [error, setError] = useState(null);
-    const [isLoaded, setIsLoaded] = useState(false);
-    const [items, setItems] = useState([]);
-    useEffect(() => {
-        fetch("https://sarmicrosystems.in/react_inventory/get_material.php")
-            .then(res => res.json())
-            .then(
-                (result) => {
-                    setIsLoaded(true);
-                    setItems(result);
-                },
-                // Note: it's important to handle errors here
-                // instead of a catch() block so that we don't swallow
-                // exceptions from actual bugs in components.
-                (error) => {
-                    setIsLoaded(true);
-                    setError(error);
-                }
-            )
-    }, [])
+  const [error, setError] = useState(null);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [items, setItems] = useState([]);
+  useEffect(() => {
+    fetch("https://sarmicrosystems.in/react_inventory/get_material.php")
+      .then(res => res.json())
+      .then(
+        (result) => {
+          setIsLoaded(true);
+          setItems(result);
+        },
+        // Note: it's important to handle errors here
+        // instead of a catch() block so that we don't swallow
+        // exceptions from actual bugs in components.
+        (error) => {
+          setIsLoaded(true);
+          setError(error);
+        }
+      )
+  }, [])
 
 
-    if (error) {
-        return <div>Error: {error.message}</div>;
-    } else if (!isLoaded) {
-        return <div>Loading...</div>;
-    } else {
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  } else if (!isLoaded) {
+    return <div>Loading...</div>;
+  } else {
 
-        return (
-            <div className="pcoded-main-container">
-        <h2 className='center'> Material </h2>
+    return (
+      <div className="pcoded-main-container">
         <div className="pcoded-wrapper">
           <div className="pcoded-content">
             <div className="pcoded-inner-content">
@@ -77,8 +76,8 @@ function Show_material(props) {
           </div>
         </div>
       </div>
-        );
-    }
+    );
+  }
 }
 
-    export default Show_material;
+export default Show_material;

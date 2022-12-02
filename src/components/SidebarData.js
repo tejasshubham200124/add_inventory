@@ -9,8 +9,8 @@ export const SidebarData = [
     path: '/admin',
     icon: <AiIcons.AiFillHome />,
     cName: 'nav-text pcoded-hasmenu',
-    child :1,
-    submenu : [
+    child: 1,
+    submenu: [
       {
         title: 'Vendor',
         path: '/admin/vendor',
@@ -47,7 +47,8 @@ export const SidebarData = [
     path: '/create_vendor',
     icon: <IoIcons.IoIosPaper />,
     cName: 'nav-text',
-    submenu : []
+    child: 0,
+    submenu: []
   },
   // {
   //   title: 'Products',
@@ -82,43 +83,55 @@ export const SidebarData = [
     path: '/add_material',
     icon: <AiIcons.AiFillUnlock />,
     cName: 'nav-text',
-    
-    submenu : []
+    child: 0,
+    submenu: []
   },
   {
     title: 'Show Material',
     path: '/show_material',
     icon: <AiIcons.AiFillUnlock />,
     cName: 'nav-text',
-    submenu : []
-  },
-  {
-    title: 'Login',
-    path: '/login',
-    icon: <AiIcons.AiFillUnlock />,
-    cName: 'nav-text',
-    submenu : []
-  },
-  {
-    title: 'Sign Up',
-    path: '/sign_up',
-    icon: <AiIcons.AiFillUnlock />,
-    cName: 'nav-text',
-    submenu : []
+    child: 0,
+    submenu: []
   },
 
+
+
+
   {
-    title: 'Modal',
-    path: '/modal',
+    title: 'Example',
+    path: '/example',
     icon: <AiIcons.AiFillUnlock />,
     cName: 'nav-text',
-    submenu : []
-  },
-  {
-    title: 'Demo',
-    path: '/demo',
-    icon: <AiIcons.AiFillUnlock />,
-    cName: 'nav-text',
-    submenu : []
-  },
+    child: 1,
+    submenu: [
+      {
+        title: 'Login',
+        path: '/login',
+        icon: <AiIcons.AiFillUnlock />,
+        cName: 'nav-text',
+      },
+      {
+        title: 'Sign Up',
+        path: '/sign_up',
+        icon: <AiIcons.AiFillUnlock />,
+        cName: 'nav-text',
+      },
+
+      {
+        title: 'Modal',
+        path: '/modal',
+        icon: <AiIcons.AiFillUnlock />,
+        cName: 'nav-text',
+
+      },
+      {
+        title: 'Demo',
+        path: '/demo',
+        icon: <AiIcons.AiFillUnlock />,
+        cName: 'nav-text',
+      },
+    ]
+  }
+
 ];
