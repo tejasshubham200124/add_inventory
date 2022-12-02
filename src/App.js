@@ -79,7 +79,7 @@ function App(props) {
           <PrivateRoute path="/modal" component={ModalExample} />
           <PrivateRoute path="/" exact component={Home} />
           <PrivateRoute path='/dashboard' exact component={Home} />
-          {/* <PrivateRoute path='/vendor' component={Vendor} /> */}
+          <PrivateRoute path='/vendor' component={Vendor} />
           <PrivateRoute path='/reports' component={Reports} />
           <PrivateRoute path='/products' component={Products} />
           <PrivateRoute path='/login' component={Login} />
