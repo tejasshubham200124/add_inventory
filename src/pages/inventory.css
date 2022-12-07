@@ -1,0 +1,104 @@
+.tbl {
+    width: 100%;
+    padding-top: 30px;
+    height: 200px;
+}
+
+.tbl td {
+    border: 1px solid black;
+    padding: 16px;
+    background-color: #D3D3D3;
+}
+.pt-table{
+    width:100%;
+    padding-top: 30px;
+}
+.ha{
+width:100%
+}
+.parent{
+    overflow:auto;
+    padding-top: 45px;
+}
+.tbl tr {
+    border: 2px solid black;
+}
+.table th ,td{
+    border: 1px solid ;
+}
+.tbl th {
+    border: 1px solid black;
+    align-items: center;
+    color: black;
+    font-weight: 800;
+    font-family: monospace;
+    font-size: 25px;
+    padding-left: 20px;
+}
+
+.tbl input {
+    width: 200px;
+}
+
+.th1 {
+    width: 2%
+}
+
+.form-select {
+    width: 200px;
+}
+
+.cb {
+    height: 20px;
+}
+
+.tbl2 {
+    padding-top: 40px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.tbl2 table {
+
+    width: 30%;
+    height: 150px;
+}
+
+.tbl2 tr {
+
+    border: 1px solid black;
+}
+
+.tbl2 td {
+    border: 1px solid black;
+    padding-top: 20px;
+    background-color: #D3D3D3;
+}
+
+.tbl2 th {
+    border: 1px solid black;
+    align-items: center;
+    color: black;
+    font-weight: 800;
+    font-family: monospace;
+    font-size: 25px;
+    padding-left: 20px;
+}
+
+/* .form-control {
+    width: 200px;
+} */
+
+.center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding-top: 20px;
+}
+
+.center button {
+    width: 9%
+}

@@ -63,6 +63,9 @@ nav{
     list-style: none;
     margin-bottom: 0;
 }
+.display{
+    margin-left: 85px;
+}
 .nav {
     display: flex;
     flex-wrap: wrap;

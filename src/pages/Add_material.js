@@ -60,9 +60,6 @@ export default function Add_material() {
         }
     }
 
-
-
-
     useEffect(() => {
         fetch("https://sarmicrosystems.in/react_inventory/get_vendor.php")
             .then(res => res.json())

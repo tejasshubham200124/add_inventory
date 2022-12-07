@@ -19,13 +19,13 @@ import Users from './pages/Users';
 import Add_material from './pages/Add_material';
 import Show_material from './pages/Show_material';
 import config from './config';
-
+import dataTable from './pages/dataTable';
 import Example from './pages/Example';
 import Login from './Login';
 import Dashboard from './Dashoard';
-
+import { Tbl } from './pages/Tbl';
 import ModalExample from './pages/ModalExample';
-
+import Add_inventory from './pages/add_inventory';
 import PrivateRoute from './Utils/PrivateRoute';
 import PublicRoute from './Utils/PublicRoute';
 import { getToken, removeUserSession, setUserSession } from './Utils/Common';
@@ -70,12 +70,9 @@ function App(props) {
         {/* <Articles /> */}
 
           <PublicRoute path="/login" component={Login} />
-          <PublicRoute path='/sign_up' component={Sign_up} />
-          
+          <PublicRoute path='/sign_up' component={Sign_up} /> 
           <PrivateRoute path="/admin/vendor" component={Vendor} />
           <PrivateRoute path="/admin/user" component={Users} />
-
-
           <PrivateRoute path="/modal" component={ModalExample} />
           <PrivateRoute path="/" exact component={Home} />
           <PrivateRoute path='/dashboard' exact component={Home} />
@@ -88,7 +85,8 @@ function App(props) {
           <PrivateRoute path='/show_material' component={Show_material} />
           <PrivateRoute path='/demo' component={Example} />
           <PrivateRoute path='/logout' component={Logout} />
-
+          <Route path ='/dataTable'  component={dataTable} />
+          <Route path ='/add_inventory'  component={Add_inventory} />
         </Switch>
       </Router>
     </>

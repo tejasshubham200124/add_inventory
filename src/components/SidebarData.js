@@ -131,6 +131,18 @@ export const SidebarData = [
         icon: <AiIcons.AiFillUnlock />,
         cName: 'nav-text',
       },
+      {
+        title: 'Datatable',
+        path: '/dataTable',
+        icon: <AiIcons.AiFillUnlock />,
+        cName: 'nav-text',
+      },
+      {
+        title: 'Add Inventory',
+        path: '/add_inventory',
+        icon: <AiIcons.AiFillUnlock />,
+        cName: 'nav-text',
+      },
     ]
   }
 
